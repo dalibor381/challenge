@@ -1,0 +1,10 @@
+com/ama/agencybooks/model/User.class
+com/ama/agencybooks/AgencyBooksApplication.class
+com/ama/agencybooks/repository/UserRepository.class
+com/ama/agencybooks/repository/BookRepository.class
+com/ama/agencybooks/service/BookService.class
+com/ama/agencybooks/model/SecurityLevel.class
+com/ama/agencybooks/controller/UsersController.class
+com/ama/agencybooks/service/UserService.class
+com/ama/agencybooks/model/Book.class
+com/ama/agencybooks/controller/BooksController.class

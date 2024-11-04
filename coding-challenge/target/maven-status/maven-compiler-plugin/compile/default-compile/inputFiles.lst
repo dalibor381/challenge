@@ -1,0 +1,10 @@
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/AgencyBooksApplication.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/controller/BooksController.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/controller/UsersController.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/model/Book.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/model/SecurityLevel.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/model/User.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/repository/BookRepository.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/repository/UserRepository.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/service/BookService.java
+/home/dwlocks/Proj/coding-challenge/src/main/java/com/ama/agencybooks/service/UserService.java
