@@ -1,4 +1,4 @@
-package com.ama.bookshop;
+package com.ama.agencybooks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

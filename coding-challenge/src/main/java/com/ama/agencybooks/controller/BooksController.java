@@ -1,18 +1,12 @@
 package com.ama.agencybooks.controller;
 
-import org.springframework.web.bind.annotation.RestController;
 import com.ama.agencybooks.model.Book;
 import com.ama.agencybooks.repository.BookRepository;
 import com.ama.agencybooks.service.BookService;
-import java.util.Arrays;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @RestController
 public class BooksController {
@@ -29,6 +23,11 @@ public class BooksController {
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
+
+    @GetMapping("/books/unclassified")
+    public List<Book> getUnclassifiedBooks() {
+        return bookService.getUnclassifiedBooks();
+    }
     
     @GetMapping("/books/{bookId}")
     public Optional<Book> getBook(@RequestParam Long bookId) {
@@ -36,8 +35,8 @@ public class BooksController {
     }
     
     @GetMapping("/books/top_secret")
-    public List<String> getSecretBooksList() {
-        return Arrays.asList("Foo", "Bar");
+    public List<Book> getSecretBooksList() {
+        return bookService.getAllBooks();
     }
     
     @PostMapping("/books")

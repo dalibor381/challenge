@@ -2,8 +2,9 @@ package com.ama.agencybooks.service;
 
 import com.ama.agencybooks.model.User;
 import com.ama.agencybooks.repository.UserRepository;
-import java.util.List;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -21,4 +22,5 @@ public class UserService {
     public User getUser(String userName) {
         return userRepo.findByUserName(userName);
     }
+
 }
