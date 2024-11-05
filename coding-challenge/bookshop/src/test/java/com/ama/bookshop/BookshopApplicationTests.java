@@ -1,4 +1,4 @@
-package com.ama.bookshop;
+package com.ama.agencybooks;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
