@@ -19,8 +19,18 @@ public class BooksController {
         this.bookRepo = bookRepo;
     }
 
-    @GetMapping("/books")
+    @GetMapping("/public/books")
     public List<Book> getAllBooks() {
+        return bookService.getAllBooks();
+    }
+    
+    @GetMapping("/books/{bookId}")
+    public Optional<Book> getBook(@RequestParam Long bookId) {
+        return bookService.getBook(bookId);
+    }
+    
+    @GetMapping("/books/topSecret")
+    public List<Book> getSecretBooksList() {
         return bookService.getAllBooks();
     }
 
@@ -29,17 +39,7 @@ public class BooksController {
         return bookService.getUnclassifiedBooks();
     }
     
-    @GetMapping("/books/{bookId}")
-    public Optional<Book> getBook(@RequestParam Long bookId) {
-        return bookService.getBook(bookId);
-    }
-    
-    @GetMapping("/books/top_secret")
-    public List<Book> getSecretBooksList() {
-        return bookService.getAllBooks();
-    }
-    
-    @PostMapping("/books")
+    @PostMapping("/public/addBook")
     public Book addBook(@RequestBody Book newBook) {
         return bookRepo.save(newBook);
     }

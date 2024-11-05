@@ -3,10 +3,14 @@ package com.ama.agencybooks.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Entity
+@Entity(name="books")
 @Table(name="books")
 @Data
+@Getter
+@Setter
 public class Book {
 
     @Id

@@ -1,1 +1,3 @@
-com/ama/bookshop/BookshopApplicationTests.class
+com\ama\agencybooks\BookshopApplicationTests.class
+com\ama\agencybooks\UnclassifiedAuthorizationTest.class
+com\ama\agencybooks\TopSecretAuthorizationTest.class

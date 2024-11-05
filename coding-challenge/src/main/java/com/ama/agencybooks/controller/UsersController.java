@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 public class UsersController {
 
@@ -19,17 +18,17 @@ public class UsersController {
         this.userRepo = userRepo;
     }
 
-    @GetMapping("/users")
+    @GetMapping("/public/users")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/users/{username}")
+    @GetMapping("/public/users/{username}")
     public User getUser(@RequestParam String username) {
         return userService.getUser(username);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/public/addUser")
     public User addUser(@RequestBody User newUser) {
         return userRepo.save(newUser);
     }

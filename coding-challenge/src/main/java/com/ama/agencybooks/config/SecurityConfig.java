@@ -1,5 +1,6 @@
 package com.ama.agencybooks.config;
 
+import com.ama.agencybooks.service.BookService;
 import com.ama.agencybooks.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,12 +34,15 @@ public class SecurityConfig  {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private BookService bookService;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/users").permitAll())
+                        .requestMatchers("/public/**")
+                        .permitAll())
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/books/unclassified").hasRole(UNCLASSIFIED.name())
                         .requestMatchers("/books/top_secret").hasRole(TOP_SECRET.name())

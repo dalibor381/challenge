@@ -10,29 +10,18 @@
       "name": "getBooks",
       "request": {
         "auth": {
-          "type": "basic",
-          "basic": [
-            {
-              "key": "password",
-              "value": "twret",
-              "type": "string"
-            },
-            {
-              "key": "username",
-              "value": "wetrewr",
-              "type": "string"
-            }
-          ]
+          "type": "noauth"
         },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "localhost:8080/books",
+          "raw": "localhost:8080/public/books",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
+            "public",
             "books"
           ]
         }
@@ -60,14 +49,14 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "localhost:8080/books/top_secret",
+          "raw": "localhost:8080/books/topSecret",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
             "books",
-            "top_secret"
+            "topSecret"
           ]
         }
       },
@@ -114,7 +103,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"title\": \"The Federal Budget: It's big.\",\r\n    \"author\": \"Colin Jost\",\r\n    \"classification\": 1\r\n}",
+          "raw": "{\r\n    \"title\": \"Check this book\",\r\n    \"author\": \"Colin Jost\",\r\n    \"classification\": 1\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -122,13 +111,21 @@
           }
         },
         "url": {
-          "raw": "localhost:8080/books",
+          "raw": "localhost:8080/public/addBook",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "books"
+            "public",
+            "addBook"
+          ],
+          "query": [
+            {
+              "key": null,
+              "value": "",
+              "disabled": true
+            }
           ]
         }
       },
@@ -137,11 +134,14 @@
     {
       "name": "addBook top-secret",
       "request": {
+        "auth": {
+          "type": "noauth"
+        },
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"title\": \"Clean Code\",\r\n    \"author\": \"Robert Cecil Martin\",\r\n    \"classification\": 0\r\n}",
+          "raw": "{\r\n    \"title\": \"Clean Code22\",\r\n    \"author\": \"Robert Cecil Martin22\",\r\n    \"classification\": 0\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -149,13 +149,14 @@
           }
         },
         "url": {
-          "raw": "localhost:8080/books",
+          "raw": "localhost:8080/public/addBook",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "books"
+            "public",
+            "addBook"
           ]
         }
       },
@@ -164,15 +165,19 @@
     {
       "name": "get users",
       "request": {
+        "auth": {
+          "type": "noauth"
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "localhost:8080/users",
+          "raw": "localhost:8080/public/users",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
+            "public",
             "users"
           ]
         }
@@ -182,11 +187,14 @@
     {
       "name": "add user unclassified",
       "request": {
+        "auth": {
+          "type": "noauth"
+        },
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"userName\": \"ttom\",\r\n    \"fullName\": \"Talkative Tom\",\r\n    \"clearance\": \"UNCLASSIFIED\"\r\n}",
+          "raw": "{\r\n    \"userName\": \"newUser\",\r\n    \"fullName\": \"Tom Tom\",\r\n    \"clearance\": \"UNCLASSIFIED\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -194,13 +202,14 @@
           }
         },
         "url": {
-          "raw": "localhost:8080/users",
+          "raw": "localhost:8080/public/addUser",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "users"
+            "public",
+            "addUser"
           ]
         }
       },
@@ -209,6 +218,9 @@
     {
       "name": "add user top_secret",
       "request": {
+        "auth": {
+          "type": "noauth"
+        },
         "method": "POST",
         "header": [],
         "body": {
@@ -221,13 +233,14 @@
           }
         },
         "url": {
-          "raw": "localhost:8080/users",
+          "raw": "localhost:8080/public/addUser",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "users"
+            "public",
+            "addUser"
           ]
         }
       },
