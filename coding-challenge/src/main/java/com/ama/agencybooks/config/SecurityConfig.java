@@ -1,8 +1,5 @@
 package com.ama.agencybooks.config;
 
-import com.ama.agencybooks.service.BookService;
-import com.ama.agencybooks.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,11 +28,6 @@ public class SecurityConfig  {
     private String userUnclassified;
     @Value("${pass.unclassified}")
     private String passUnclassified;
-
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private BookService bookService;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
